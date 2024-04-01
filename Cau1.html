@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let ScoreList = [10,9,10];
+    let average = findAvg(ScoreList);
+    console.log(`Diem trung binh : ${average}`);
+
+    function findAvg(ScoreList) {
+        let sumOfScore = 0;
+        for (let i = 0; i < ScoreList.length; i++) {
+                sumOfScore+= ScoreList[i];
+        }
+        let elementNumberOfScoreList = ScoreList.length;
+        return sumOfScore/elementNumberOfScoreList;
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input_array = [1, 2, 3, 4];
+    let input_number_to_array = 9;
+    let index_to_input_array = 0;
+    let new_array = insertNumberToArray(input_array, input_number_to_array, index_to_input_array);
+    console.log(new_array);
+
+    function insertNumberToArray(input_array,
+                                 input_number_to_array,
+                                 index_to_input_array) {
+        if (index_to_input_array < 0 || index_to_input_array >
+            input_array.length) {
+            return input_array;
+        } else {
+            for (let i = input_array.length; i >= index_to_input_array;
+                 i--) {
+                input_array[i] = input_array[i - 1];
+            }
+            input_array [index_to_input_array] = input_number_to_array;
+        }
+        return input_array;
+    }
+</script>
+</body>
+</html>

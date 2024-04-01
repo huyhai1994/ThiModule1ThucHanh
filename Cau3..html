@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PrimeNUmberSum</title>
+</head>
+<body>
+<script>
+    let start_number = 0;
+    let end_number = 10;
+    console.log(`sum of list Prime = ${sumOfListPrime(start_number,end_number)}`);
+    function sumOfListPrime(start_number,end_number){
+        let sum_prime_number = 0;
+        for (let i = start_number; i <= end_number ; i++) {
+            if(isNumberPrime(i)){
+                console.log(i);
+                sum_prime_number += i;
+            }
+        }
+        return sum_prime_number;
+    }
+
+    function isNumberPrime(input_number) {
+        let count = 0;
+        for (let i = 0; i <= input_number; i++) {
+            if (input_number % i === 0){
+                count++;
+            }
+        }
+        return count===2;
+    }
+
+
+</script>
+
+
+</body>
+</html>
